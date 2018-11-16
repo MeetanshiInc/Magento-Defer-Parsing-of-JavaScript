@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Meetanshi_Defer>
+			<version>1.0.0</version>
+		</Meetanshi_Defer>
+	</modules>
+	<global>
+		<models>
+			<defer>
+				<class>Meetanshi_Defer_Model</class>
+			</defer>
+		</models>
+		<helpers>
+			<defer>
+				<class>Meetanshi_Defer_Helper</class>
+			</defer>
+		</helpers>
+	</global>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<defer after="Mage_Adminhtml">Meetanshi_Defer_Adminhtml</defer>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<defer>
+											<title>Defer Js</title>
+										</defer>
+									</children>
+								</config>
+							</children>
+						</system>
+						<defer module="defer">
+							<title>Defer Js</title>
+							<sort_order>100</sort_order>
+							<children>
+							</children>
+						</defer>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<frontend>
+		<events>
+			<http_response_send_before>
+				<observers>
+					<defer_http_response_send_before>
+						<class>defer/observer</class>
+						<type>singleton</type>
+						<method>httpResponseSendBefore</method>
+					</defer_http_response_send_before>
+				</observers>
+			</http_response_send_before>
+		</events>
+	</frontend>
+</config>

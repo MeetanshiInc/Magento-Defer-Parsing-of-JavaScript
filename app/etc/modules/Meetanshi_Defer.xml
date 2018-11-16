@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Meetanshi_Defer>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Meetanshi_Defer>
+	</modules>
+</config>

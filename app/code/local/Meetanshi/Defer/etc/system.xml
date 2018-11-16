@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <meetanshi translate="label">
+            <label>
+                <![CDATA[<img src="https://meetanshi.com/media/logo.png" alt="Meetanshi" height="20" style="vertical-align:middle;"/>]]></label>
+            <sort_order>100</sort_order>
+        </meetanshi>
+    </tabs>
+    <sections>
+        <defer module="adminhtml" translate="label">
+            <class>separator-top</class>
+            <label>Defer Js</label>
+            <tab>meetanshi</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <deferjs_enable translate="label">
+                            <label>Defer Js</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                        </deferjs_enable>
+                    </fields>
+                </general>
+            </groups>
+        </defer>
+    </sections>
+</config>
